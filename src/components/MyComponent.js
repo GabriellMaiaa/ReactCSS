@@ -8,6 +8,7 @@ const MyComponent = () => {
       <p>Este é um parágrafo global</p>
       {/**Abaixo mostra a criação de classes para o CSS não VAZAR */}
       <p className='par-comp'>Este é um parágrao com CLASSES</p>
+      <p className="teste">Estou testando criar coisas</p>
     </div>
   )
 }
