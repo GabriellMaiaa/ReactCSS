@@ -2,11 +2,13 @@
 import './App.css';
 import MyComponent from './components/MyComponent';
 import { useState } from 'react';
+import Title from './components/Title';
 
 function App() {
   const n = 20;
   const[name, setName] = useState("Gabriel")
   const redTitle = true;
+  let teste = 12;
   
   return (
     <div className="App">
@@ -28,6 +30,10 @@ function App() {
 
       {/**Classe Dinâmica */}
       <h2 className={redTitle ? ("red-title") : ("title")}>ESTE TÍTULO é de classes dinâmicas</h2>
+      <h3 style={teste >=20  ? ({color: "green"}) : ({color:" brown"})}>Testando os conhecimentos!!</h3>
+
+      {/**CSS MODULES - Padrão utilizado*/}
+      <Title/>
     </div>
     
     
