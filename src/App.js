@@ -6,6 +6,7 @@ import { useState } from 'react';
 function App() {
   const n = 20;
   const[name, setName] = useState("Gabriel")
+  const redTitle = true;
   
   return (
     <div className="App">
@@ -20,7 +21,13 @@ function App() {
       <h3 style={n > 10 ? {color: "blue"} : {color : "purple"}}>Inline dinâmico com IF</h3>
       <h3 style={n < 10 ? {color: "blue"} : {color : "purple"}}>Inline dinâmico com IF</h3>
       {/**Inline com useState */}
-      <h3 style={name === "Gabriel" ? {color: "green"} : {color : "purple"}}>Nome - Inline com useState</h3>
+      <h3 style={name === "Gabriel" ? {color: "green"} : {color : "purple"}}>{name} - Inline com useState</h3>
+
+      {/**CSS inline dinâmico */}
+      <h2 style={n > 10 ? ({color: "pink"}) : ({color: "red"})}>CSS dinâmico</h2>
+
+      {/**Classe Dinâmica */}
+      <h2 className={redTitle ? ("red-title") : ("title")}>ESTE TÍTULO é de classes dinâmicas</h2>
     </div>
     
     
